@@ -23,7 +23,7 @@
          }
          
          public static int[] distance(int n,float c,int tree[][]){
-             int conn[]=new int[n*n];
+             int conn[][]=new int[n][n];
              int k=0;
              for(int i=0;i<n;i++){
                  int x=tree[i][0];
@@ -59,9 +59,12 @@
             for(i=0;i<n;i++){
                 totcount+= tree[i][2];
             }
-            int dist[] = distance(n,c,tree);
+            int dist[][] = distance(n,c,tree);
             for(i=0;i<dist.length;i++){
-                System.out.println(dist[i]);
+                for(j=0;j<n;j++){
+                    System.out.print(dist[i][j]+" ");
+                }
+                System.out.println();
             }
          }
          
